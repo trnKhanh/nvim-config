@@ -5,4 +5,9 @@ end
 
 require "user.lsp.mason"
 require("user.lsp.handlers").setup()
+-- Setup keymaps
+local keymaps_status_ok, _ = pcall(require, "keymaps")
+if not keymaps_status_ok then
+  vim.notify("Keymaps for lsp not found")
+end
 -- require "user.lsp.null-ls"
