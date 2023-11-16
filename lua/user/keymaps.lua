@@ -64,3 +64,7 @@ setKeymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 setKeymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 setKeymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 setKeymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+-- Telescope keymaps
+setKeymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+setKeymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
