@@ -66,5 +66,13 @@ setKeymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 setKeymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope keymaps
-setKeymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+setKeymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 setKeymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
+setKeymap("n", "<leader>l", "<cmd>Telescope diagnostics<cr>", opts)
+setKeymap("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
+setKeymap("n", "gd", "<cmd>Telescope lsp_definitions<cr>", opts)
+setKeymap("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)
+setKeymap("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", opts)
+setKeymap("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", opts)
+setKeymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts)
+
