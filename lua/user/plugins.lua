@@ -31,8 +31,7 @@ end
 -- Have packer use a popup window
 packer.init {
   display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+    open_fn = function() return require("packer.util").float { border = "rounded" }
     end,
   },
 }
@@ -69,6 +68,13 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
