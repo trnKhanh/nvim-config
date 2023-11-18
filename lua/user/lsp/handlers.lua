@@ -1,6 +1,5 @@
 local M = {}
 
--- TODO: backfill this to template
 M.setup = function()
   local signs = {
     { name = "DiagnosticSignError", text = "" },
@@ -47,12 +46,12 @@ local function lsp_highlight_document(client, bufnr)
   -- Set autocommands conditional on server_capabilities
   if client.server_capabilities.documentHighlightProvider then
     vim.cmd([[
-      hi LspReferenceRead cterm=bold ctermbg=237 guibg=#544e4a
-      hi LspReferenceText cterm=bold ctermbg=237 guibg=#544e4a
-      hi LspReferenceWrite cterm=bold ctermbg=237 guibg=#544e4a
+      hi LspReferenceRead gui=underline cterm=underline guibg=none
+      hi LspReferenceText gui=underline cterm=underline guibg=none
+      hi LspReferenceWrite gui=bold,underline cterm=underline guibg=none
     ]])
     local group = vim.api.nvim_create_augroup("LSPDocumentHighlight", {})
-    vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
+    vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
       buffer = bufnr,
       group = group,
       callback = function()
@@ -60,7 +59,7 @@ local function lsp_highlight_document(client, bufnr)
       end,
     })
 
-    vim.api.nvim_create_autocmd({"CursorMoved"}, {
+    vim.api.nvim_create_autocmd({ "CursorMoved" }, {
       buffer = bufnr,
       group = group,
       callback = function()
