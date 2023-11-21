@@ -10,4 +10,4 @@ require "user.statusline"
 require "user.nvimtree"
 require "user.treesitter"
 require "user.toggleterm"
-
+require "user.autopairs"
