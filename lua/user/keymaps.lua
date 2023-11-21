@@ -6,8 +6,7 @@ local term_opts = { silent = true }
 local setKeymap = vim.keymap.set
 local delKeymap = vim.keymap.del
 
---Remap space as leader key
-setKeymap("", "<Space>", "<Nop>", opts)
+--Remap space as leader key setKeymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -37,6 +36,19 @@ setKeymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 setKeymap("n", "<S-l>", ":bnext<CR>", opts)
 setKeymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- Telescope keymaps
+setKeymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+setKeymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
+setKeymap("n", "<leader>l", "<cmd>Telescope diagnostics<cr>", opts)
+setKeymap("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
+setKeymap("n", "gd", "<cmd>Telescope lsp_definitions<cr>", opts)
+setKeymap("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)
+setKeymap("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", opts)
+setKeymap("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", opts)
+setKeymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts)
+
+-- Lazygit toggle
+setKeymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 -- Insert --
 -- Press jk fast to enter
 -- keymap("i", "jk", "<ESC>", opts)
@@ -60,19 +72,10 @@ setKeymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
-setKeymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-setKeymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-setKeymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-setKeymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+-- setKeymap("t", "<ESC>", "<C-\\><C-N>", term_opts)
+-- setKeymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+-- setKeymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+-- setKeymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+-- setKeymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Telescope keymaps
-setKeymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-setKeymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
-setKeymap("n", "<leader>l", "<cmd>Telescope diagnostics<cr>", opts)
-setKeymap("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
-setKeymap("n", "gd", "<cmd>Telescope lsp_definitions<cr>", opts)
-setKeymap("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)
-setKeymap("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", opts)
-setKeymap("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", opts)
-setKeymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts)
 
