@@ -7,6 +7,7 @@ require "user.lsp"
 require "user.telescope"
 require "user.treesitter"
 require "user.statusline"
-require "user.filetree"
+require "user.nvimtree"
 require "user.treesitter"
 require "user.toggleterm"
+

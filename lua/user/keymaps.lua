@@ -25,6 +25,7 @@ setKeymap("n", "<C-j>", "<C-w>j", opts)
 setKeymap("n", "<C-k>", "<C-w>k", opts)
 setKeymap("n", "<C-l>", "<C-w>l", opts)
 
+-- NvimTree
 setKeymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Resize with arrows
