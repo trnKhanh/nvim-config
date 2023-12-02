@@ -1,0 +1,28 @@
+local cmp_status_ok, null_ls = pcall(require, "null-ls")
+if not cmp_status_ok then
+  return
+end
+
+local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
+null_ls.setup({
+  sources = {
+    formatting.prettier,
+    formatting.black.with({ extra_args = { "-l", "80" } }),
+    formatting.stylua,
+    diagnostics.eslint,
+    diagnostics.flake8.with({ extra_args = { "--max-line-length", "80" } }),
+  },
+})
+
+
+function LSP_FORMATTING(bufnr)
+    vim.lsp.buf.format({
+        filter = function(client)
+            -- apply whatever logic you want (in this example, we'll only use null-ls)
+            return client.name == "null-ls"
+        end,
+        bufnr = bufnr,
+    })
+end
+

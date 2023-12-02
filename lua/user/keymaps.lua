@@ -78,5 +78,3 @@ setKeymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 -- setKeymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- setKeymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- setKeymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
-

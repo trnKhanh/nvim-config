@@ -125,6 +125,11 @@ _G.packer_plugins = {
     path = "/Users/namkhanhtran/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/namkhanhtran/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/Users/namkhanhtran/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -145,10 +150,10 @@ _G.packer_plugins = {
     path = "/Users/namkhanhtran/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["null-ls.nvim"] = {
+  ["none-ls.nvim"] = {
     loaded = true,
-    path = "/Users/namkhanhtran/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+    path = "/Users/namkhanhtran/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
+    url = "https://github.com/nvimtools/none-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,

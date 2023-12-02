@@ -5,6 +5,7 @@ end
 
 require "user.lsp.mason"
 require("user.lsp.handlers").setup()
+require "user.lsp.null_ls"
 -- Setup keymaps
 local keymaps_status_ok, _ = pcall(require, "user.lsp.keymaps")
 if not keymaps_status_ok then
