@@ -12,13 +12,10 @@ configs.setup({
 		disable = { "" }, -- list of language that will be disabled
 		additional_vim_regex_highlighting = true,
 	},
-	indent = { enable = true, disable = { "yaml" } },
-	--rainbow = {
-	--  enable = true,
-	--  -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-	--  extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-	--  max_file_lines = nil, -- Do not enable for files with more than n lines, int
-	--  -- colors = {}, -- table of hex strings
-	--  -- termcolors = {} -- table of colour name strings
-	--}
+	indent = { enable = true },
 })
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.cmd("set nofoldenable")
+vim.cmd("set foldlevel=100")

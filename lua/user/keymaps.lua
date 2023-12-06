@@ -25,6 +25,20 @@ setKeymap("n", "<C-j>", "<C-w>j", opts)
 setKeymap("n", "<C-k>", "<C-w>k", opts)
 setKeymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Harpoon
+setKeymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<CR>", opts)
+setKeymap("n", "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
+setKeymap("n", "<S-h>", ":lua require('harpoon.ui').nav_prev()<CR>", opts)
+setKeymap("n", "<S-l>", ":lua require('harpoon.ui').nav_next()<CR>", opts)
+for i = 1, 9, 1 do
+	setKeymap(
+		"n",
+		"<leader>o" .. tostring(i),
+		":lua require('harpoon.ui').nav_file(" .. tostring(i) .. ")<CR>",
+		opts
+	)
+end
+
 -- NvimTree
 setKeymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
