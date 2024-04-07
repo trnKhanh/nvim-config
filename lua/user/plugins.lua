@@ -45,6 +45,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
 	use("ryanoasis/vim-devicons")
 	use("ThePrimeagen/harpoon")
+	use("windwp/nvim-ts-autotag")
 
 	-- Colorschemes
 	use("morhetz/gruvbox")

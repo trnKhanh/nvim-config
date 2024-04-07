@@ -13,6 +13,9 @@ configs.setup({
 		additional_vim_regex_highlighting = true,
 	},
 	indent = { enable = true },
+	autotag = {
+		enable = true,
+	},
 })
 
 vim.opt.foldmethod = "expr"

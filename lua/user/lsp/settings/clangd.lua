@@ -1,6 +1,6 @@
 return {
-  cmd = {
-    "clangd",
-    "--query-driver=/usr/local/bin/g++",
-  }
+	cmd = {
+		"clangd",
+		"--query-driver=/usr/local/bin/g++",
+	},
 }

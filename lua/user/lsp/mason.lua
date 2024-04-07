@@ -8,6 +8,8 @@ local servers = {
 	"cssls",
 	"html",
 	"sqlls",
+	"tailwindcss",
+	"cmake",
 }
 
 local settings = {
