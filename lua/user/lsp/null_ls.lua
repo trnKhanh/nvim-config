@@ -12,7 +12,6 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.cmake_format,
 		diagnostics.eslint,
-		diagnostics.flake8.with({ extra_args = { "--max-line-length", "80" } }),
 		diagnostics.cmake_lint,
 	},
 })

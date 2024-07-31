@@ -108,6 +108,19 @@ return packer.startup(function(use)
 	-- Git sign
 	use("lewis6991/gitsigns.nvim")
 
+	-- Markdown
+	use({
+		"MeanderingProgrammer/markdown.nvim",
+		as = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
+		after = { "nvim-treesitter" },
+		requires = { "echasnovski/mini.nvim", opt = true }, -- if you use the mini.nvim suite
+		-- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
+		-- requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+		config = function()
+			require("render-markdown").setup({})
+		end,
+	})
+
 	-- Bufferline
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
