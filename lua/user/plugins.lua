@@ -68,7 +68,16 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/mason.nvim") -- simple to use language server installer
 	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
-	use("nvimtools/none-ls.nvim") -- LSP diagnostics and code actions
+	use({ "nvimtools/none-ls.nvim", requires = { "nvimtools/none-ls-extras.nvim" } }) -- LSP diagnostics and code actions
+
+  -- Alternative for tsserver
+	use({
+		"pmizio/typescript-tools.nvim",
+		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		config = function()
+			require("typescript-tools").setup({})
+		end,
+	})
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
