@@ -13,12 +13,12 @@ local sources = {
 	diagnostics.cmake_lint,
 }
 
-local eslint_status_ok, eslint = pcall(require, "none-ls.diagnostics.eslint")
-if eslint_status_ok then
-	table.insert(sources, eslint)
-else
-	vim.notify("[null-ls] failed to load eslint for diagnostics", vim.log.levels.WARN)
-end
+-- local eslint_status_ok, eslint = pcall(require, "none-ls.diagnostics.eslint")
+-- if eslint_status_ok then
+-- 	table.insert(sources, eslint)
+-- else
+-- 	vim.notify("[null-ls] failed to load eslint for diagnostics", vim.log.levels.WARN)
+-- end
 
 null_ls.setup({
 	sources = sources,

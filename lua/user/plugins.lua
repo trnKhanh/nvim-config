@@ -47,6 +47,8 @@ return packer.startup(function(use)
 	use("ThePrimeagen/harpoon")
 	use("windwp/nvim-ts-autotag")
 
+	-- Git
+
 	-- Colorschemes
 	use("morhetz/gruvbox")
 	use({ "catppuccin/nvim", as = "catppuccin" })
@@ -70,7 +72,7 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
 	use({ "nvimtools/none-ls.nvim", requires = { "nvimtools/none-ls-extras.nvim" } }) -- LSP diagnostics and code actions
 
-  -- Alternative for tsserver
+	-- Alternative for tsserver
 	use({
 		"pmizio/typescript-tools.nvim",
 		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
@@ -114,13 +116,13 @@ return packer.startup(function(use)
 			require("Comment").setup()
 		end,
 	})
-	-- Git sign
+	-- Git
 	use("lewis6991/gitsigns.nvim")
+	use("tpope/vim-fugitive")
 
 	-- Markdown
 	use({
-		"MeanderingProgrammer/markdown.nvim",
-		as = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
+		"MeanderingProgrammer/render-markdown.nvim",
 		after = { "nvim-treesitter" },
 		requires = { "echasnovski/mini.nvim", opt = true }, -- if you use the mini.nvim suite
 		-- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
@@ -129,7 +131,6 @@ return packer.startup(function(use)
 			require("render-markdown").setup({})
 		end,
 	})
-
 	-- Bufferline
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 

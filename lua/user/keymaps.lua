@@ -34,8 +34,8 @@ setKeymap("n", "<leader>bd", ":bd<CR>")
 -- Harpoon
 setKeymap("n", "<leader>a", ":lua require('harpoon.mark').add_file()<CR>", opts)
 setKeymap("n", "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
-setKeymap("n", "<S-h>", ":lua require('harpoon.ui').nav_prev()<CR>", opts)
-setKeymap("n", "<S-l>", ":lua require('harpoon.ui').nav_next()<CR>", opts)
+-- setKeymap("n", "<S-h>", ":lua require('harpoon.ui').nav_prev()<CR>", opts)
+-- setKeymap("n", "<S-l>", ":lua require('harpoon.ui').nav_next()<CR>", opts)
 for i = 1, 9, 1 do
 	setKeymap("n", "<leader>o" .. tostring(i), ":lua require('harpoon.ui').nav_file(" .. tostring(i) .. ")<CR>", opts)
 end
@@ -48,9 +48,10 @@ setKeymap("n", "<S-Up>", ":resize +2<CR>", opts)
 setKeymap("n", "<S-Down>", ":resize -2<CR>", opts)
 setKeymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 setKeymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
--- Navigate buffers
-setKeymap("n", "<S-l>", ":bnext<CR>", opts)
-setKeymap("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- -- Navigate buffers
+setKeymap("n", "<SC-l>", ":bnext<CR>", opts)
+setKeymap("n", "<SC-h>", ":bprevious<CR>", opts)
 
 -- Telescope keymaps
 setKeymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
