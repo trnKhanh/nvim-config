@@ -47,8 +47,6 @@ return packer.startup(function(use)
 	use("ThePrimeagen/harpoon")
 	use("windwp/nvim-ts-autotag")
 
-	-- Git
-
 	-- Colorschemes
 	use("morhetz/gruvbox")
 	use({ "catppuccin/nvim", as = "catppuccin" })
